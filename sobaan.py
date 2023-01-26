@@ -3,54 +3,44 @@ x = input("Type a name: ")
 y = int(input("Type an age: "))
 if y < 0:
     print("Invalid age")
-older = []
-oloc = []
-younger = [] 
-yloc = []
-o2 = []
-y2 = []
- 
-names = [
-    "Frodo",
-    "Samwise",
-    "Gandalf",
-    "Legolas",
-    "Gimli",
-    "Aragorn",
-    "Boromir",
-    "Merry",
-    "Pippin",
-]
-ages = [51, 39, 2000, 2931, 140, 88, 41, 37, 29]
-
-for index in ages:
-    if y > index:
-        older.append(index)
-    elif y < index:
-        younger.append(index)
-        
-for index in older:
-    oloc.append(ages.index(index))
-for index in younger:
-    yloc.append(ages.index(index))
-
-for index in oloc:
-    o2.append(names[index])
+else:
     
-for index in yloc:
-    y2.append(names[index])
+    older = []
+    younger = []
+
+    names = [
+        "Frodo",
+        "Samwise",
+        "Gandalf",
+        "Legolas",
+        "Gimli",
+        "Aragorn",
+        "Boromir",
+        "Merry",
+        "Pippin",
+    ]
+    ages = [51, 39, 2000, 2931, 140, 88, 41, 37, 29]
+
+    for index in range(len(ages)):
+        if y < ages[index]:
+            older.append(names[index])
+        else:
+            younger.append(names[index])
 
 
-    
 
-
-    
 #ans:
-if o2 == []:
-    print(x, "is", y,"years old, and they are younger than", (', '.join(y2)))
-elif y2 == []:
-    print( x,"is", y, "years old, and they are older than",(', '.join(o2)))
-elif o2 != [] and y2 != []:
-    print( x,"is", y, "years old, and they are older than",(', '.join(o2)))
-    print(x, "is", y, "years old, and they are younger than",(', '.join(y2)))
 
+    def younger_print():
+        print(x,"is", y,"years old, and they are older than", (', '.join(younger)))
+    
+    def older_print():
+        print(x,"is", y,"years old, and they are younger than",(', '.join(older)))
+
+    if not older:
+        younger_print()
+    elif not younger:
+        older_print()
+    else:
+        younger_print()
+        older_print()
