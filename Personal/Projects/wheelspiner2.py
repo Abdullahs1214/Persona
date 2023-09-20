@@ -1,0 +1,2 @@
+def wheelspinner():
+    import random
