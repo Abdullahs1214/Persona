@@ -39,6 +39,70 @@ x = input("")
 print(x[0],x[len(x)-1],sep="")
 """
 #5a
+"""
 a = input("")
 print(a[1:(len(a)-1)])
+"""
+#6.2.4
+#1
+"""
+x = input("type a number: ")
+print(int(x)+5)
+"""
+#2
+"""
+x = input("type a decimal: ")
+print(abs(float(x))
+"""
+#3
+"""
+x = input("type a decimal: ")
+y = input("type a decimal: ")
+z = max(x,y)
+print(z)
+"""
+#3a
+"""
+x = input("type a decimal: ")
+y = input("type a decimal: ")
+z = min(x,y)
+print(z)
+"""
+#4
+"need help"
 
+#6.3.2
+#1
+"""
+mylist = [0.1,2.2,5.6,7.4,9.8]
+print(max(mylist))
+"""
+#2
+"""
+x =list(map(int,input("").split()))
+x.reverse()
+x.append(3)
+del x[0]
+x.extend([1,2,3])
+x.append((int(x[0])+int(x[1])))
+x.reverse()
+print(x)
+"""
+#3
+"""
+x  = [int(i) for i in input().split ()]
+print(max(x))
+"""
+#4
+x = input().split()
+
+a = x[0]
+b = x[len(x)-1]
+
+print(a, b)
+x.insert(0,b)
+#del x[1]
+x.insert(len(x)-1,a)
+#del x[len(x)-1]
+
+print(x)
