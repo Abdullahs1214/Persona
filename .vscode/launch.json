@@ -3,6 +3,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Car",
+            "request": "launch",
+            "mainClass": "Car",
+            "projectName": "Personal-Library_6b324c10"
+        },
+        {
+            "type": "java",
+            "name": "Hello",
+            "request": "launch",
+            "mainClass": "Hello",
+            "projectName": "Personal-Library_6b324c10"
+        },
+        {
+            "type": "java",
+            "name": "Quickstart",
+            "request": "launch",
+            "mainClass": "Quickstart",
+            "projectName": "Personal-Library_6b324c10"
+        },
+        {
+            "type": "java",
             "name": "demo",
             "request": "launch",
             "mainClass": "demo",
