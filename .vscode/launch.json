@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Quickstart",
+            "request": "launch",
+            "mainClass": "Quickstart.Quickstart",
+            "projectName": "Personal-Library_6b324c10"
+        },
+        {
+            "type": "java",
             "name": "BandNameGenerator",
             "request": "launch",
             "mainClass": "OOP.lab2.BandNameGenerator",
