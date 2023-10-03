@@ -1,4 +1,4 @@
-tcount = 0
+#tcount = 0
 """while not False:
     
     word = input("word: ")
@@ -11,12 +11,3 @@ tcount = 0
         break
 
 """
-
-
-
-
-
-
-    
-
-

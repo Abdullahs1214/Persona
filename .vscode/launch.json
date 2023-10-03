@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "BandNameGenerator",
+            "request": "launch",
+            "mainClass": "OOP.lab2.BandNameGenerator",
+            "projectName": "Code files_968b1321"
+        },
+        {
+            "type": "java",
             "name": "Car",
             "request": "launch",
             "mainClass": "Car.Car",

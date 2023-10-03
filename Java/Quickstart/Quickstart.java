@@ -1,3 +1,4 @@
+package Quickstart;
 public class Quickstart{
     public static boolean isEven(int i) { 
     return (i % 2) == 1;
