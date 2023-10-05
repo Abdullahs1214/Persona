@@ -7,14 +7,14 @@ import java.io.IOException;
 
 public class SongCollectionArray {
 	private String[] songs;
-	
+	//public String[][] collection;
 	/**
 	 * Create a SongCollectionArray object with capacity i (= the number of songs it can hold).
 	 * @param i the number of songs the collection can hold
 	 */
 	public SongCollectionArray(int i) {
-		 SongCollectionArray[] collection = new SongCollectionArray[i];
-		
+		songs = new String[i];
+		// SongCollectionArray[] collection = new SongCollectionArray[i];
 	}
 	
 	
@@ -26,10 +26,7 @@ public class SongCollectionArray {
 	 * @return
 	 */
 	public boolean add(String s) {
-		String tocheckValue;
-		for (String element : SongCollectionArray) {
-			if (element != tocheckValue){
-				collection
+		
 			}
 		}
 	}

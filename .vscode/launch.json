@@ -3,6 +3,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "GameLauncher",
+            "request": "launch",
+            "mainClass": "Guessgame.GameLauncher",
+            "projectName": "Personal-Library_6b324c10"
+        },
+        {
+            "type": "java",
+            "name": "GuessGame",
+            "request": "launch",
+            "mainClass": "Guessgame.GuessGame",
+            "projectName": "Personal-Library_6b324c10"
+        },
+        {
+            "type": "java",
+            "name": "Player",
+            "request": "launch",
+            "mainClass": "Guessgame.Player",
+            "projectName": "Personal-Library_6b324c10"
+        },
+        {
+            "type": "java",
             "name": "Quickstart",
             "request": "launch",
             "mainClass": "Quickstart.Quickstart",
