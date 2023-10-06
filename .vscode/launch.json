@@ -5,6 +5,27 @@
             "type": "java",
             "name": "GameLauncher",
             "request": "launch",
+            "mainClass": "GuessingGame.GameLauncher",
+            "projectName": "Personal-Library_6b324c10"
+        },
+        {
+            "type": "java",
+            "name": "GuessingGame",
+            "request": "launch",
+            "mainClass": "GuessingGame.GuessingGame",
+            "projectName": "Personal-Library_6b324c10"
+        },
+        {
+            "type": "java",
+            "name": "Player",
+            "request": "launch",
+            "mainClass": "GuessingGame.Player",
+            "projectName": "Personal-Library_6b324c10"
+        },
+        {
+            "type": "java",
+            "name": "GameLauncher",
+            "request": "launch",
             "mainClass": "Guessgame.GameLauncher",
             "projectName": "Personal-Library_6b324c10"
         },
