@@ -1,20 +1,22 @@
 package OOP.ass2;
 
 import java.io.BufferedReader;
-
 import java.io.FileReader;
 import java.io.IOException;
 
 public class SongCollectionArray {
 	private String[] songs;
-	//public String[][] collection;
+	private int numsongs;
+	
 	/**
 	 * Create a SongCollectionArray object with capacity i (= the number of songs it can hold).
 	 * @param i the number of songs the collection can hold
 	 */
 	public SongCollectionArray(int i) {
+		//size i object
 		songs = new String[i];
-		// SongCollectionArray[] collection = new SongCollectionArray[i];
+		//empty array
+		numsongs = 0;
 	}
 	
 	
@@ -26,10 +28,14 @@ public class SongCollectionArray {
 	 * @return
 	 */
 	public boolean add(String s) {
-		
-			}
-		}
+		// false if array empty
+		if (contains(s))
+			return false; 
+		// add element and number
+		songs[numsongs++] = s;
+		return true;
 	}
+	
 	
 	/**
 	 * Remove s from the collection. Make sure that all the empty spots of the array 
@@ -38,7 +44,16 @@ public class SongCollectionArray {
 	 * @param s the song to be removed
 	 */
 	public void remove(String s) {
-		
+		//finding index of songs
+		for (int i = 0; i < numsongs; i++) {
+			//move to end of array
+			if (songs[i].equals(s)) {
+				songs[i] = songs[numsongs--];
+				//delete end of array
+				songs[numsongs + 1] = null;
+				return;
+			}
+		}
 	}
 	
 	/**
@@ -47,6 +62,11 @@ public class SongCollectionArray {
 	 * @return
 	 */
 	public boolean contains(String s) {		
+		//check if song included
+		for (String song : songs)
+			if (s.equals(song))
+				return true;
+		return false;
 	}
 	
 	/**
@@ -54,7 +74,12 @@ public class SongCollectionArray {
 	 * @param index the index of the song to return
 	 * @return
 	 */
-	public String getSong(int index) {		
+	public String getSong(int index) {
+		//return index
+		if (0 <= index && index < numsongs)
+			return songs[index];
+		
+		return null;
 	}
 	
 	/**
@@ -62,6 +87,7 @@ public class SongCollectionArray {
 	 * @return
 	 */
 	public int getNumberOfSongs() {
+		return numsongs;
 	}
 	
 	/**
@@ -69,7 +95,17 @@ public class SongCollectionArray {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-
+		
+		SongCollectionArray collection = new SongCollectionArray(100); 
+		
+		try (BufferedReader buffr = new BufferedReader(new FileReader("songs.txt"))) {
+			
+			int lines = Integer.valueOf(buffr.readLine());
+			for (int i = 0; i++ < lines; collection.add(buffr.readLine()));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+    
+		System.out.println("Number of unique songs: " + collection.getNumberOfSongs());
 	}
 }
-

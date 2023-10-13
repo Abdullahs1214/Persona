@@ -3,6 +3,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "SongCollectionArray",
+            "request": "launch",
+            "mainClass": "OOP.ass2.SongCollectionArray",
+            "projectName": "Personal-Library_6b324c10"
+        },
+        {
+            "type": "java",
+            "name": "SongCollectionArrayList",
+            "request": "launch",
+            "mainClass": "OOP.ass2.SongCollectionArrayList",
+            "projectName": "Personal-Library_6b324c10"
+        },
+        {
+            "type": "java",
             "name": "GameLauncher",
             "request": "launch",
             "mainClass": "GuessingGame.GameLauncher",

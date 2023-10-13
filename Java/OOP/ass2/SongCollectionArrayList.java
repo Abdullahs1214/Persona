@@ -14,6 +14,7 @@ public class SongCollectionArrayList {
 	 * 
 	 */
 	public SongCollectionArrayList() {
+		songs = new ArrayList<String>();
 	}
 
 	/**
@@ -24,13 +25,20 @@ public class SongCollectionArrayList {
 	 * @return
 	 */
 	public boolean add(String s) {
-	}
+		if (songs.contains(s)){
+			return false;
+		}
+		songs.add(s);
+		return true;
+		}
+	
 
 	/**
 	 * Remove s from the collection.
 	 * @param s the song to be removed
 	 */
 	public void remove(String s) {
+		songs.remove(s);
 	}
 
 	/**
@@ -39,6 +47,7 @@ public class SongCollectionArrayList {
 	 * @return
 	 */
 	public boolean contains(String s) {
+		return songs.contains(s);
 	}
 	
 	/**
@@ -47,13 +56,21 @@ public class SongCollectionArrayList {
 	 * @return
 	 */
 	public String getSong(int index) {
+		if ( 0 <= index && index < songs.size()){
+			if (songs.get(index) != ""){
+				return songs.get(index);
+			}
+		}
+			return null;
 	}
+
 
 	/**
 	 * Return the number of songs in the collection.
 	 * @return
 	 */
 	public int getNumberOfSongs() {
+		return songs.size();
 	}
 	
 	/**
@@ -61,6 +78,16 @@ public class SongCollectionArrayList {
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		SongCollectionArray collection = new SongCollectionArray(100); 
+		try (BufferedReader buffr = new BufferedReader(new FileReader("C:\\Users\\srskh\\Code files\\Java\\OOP\\ass2\\songs.txt"))) {
+			int lines = Integer.valueOf(buffr.readLine());
+			for (int i = 0; i++ < lines; collection.add(buffr.readLine()));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+    
+		System.out.println("Number of unique songs: " + collection.getNumberOfSongs());
+	}
 	}
 
-}
+
