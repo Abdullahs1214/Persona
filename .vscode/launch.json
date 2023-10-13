@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "SongCollectionArrayList",
+            "request": "launch",
+            "mainClass": "OOP.ass2.SongCollectionArrayList",
+            "projectName": "Code files_968b1321"
+        },
+        {
+            "type": "java",
             "name": "SongCollectionArray",
             "request": "launch",
             "mainClass": "OOP.ass2.SongCollectionArray",
