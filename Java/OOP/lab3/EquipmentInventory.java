@@ -3,7 +3,7 @@ package OOP.lab3;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-
+import OOP.lab3.Equipment;
 /** 
  * Finish this class.
  */
@@ -55,9 +55,9 @@ public class EquipmentInventory {
 	protected void increaseInventoryCount(Equipment e) {
         int increase = inventoryCount.get(e) + 1;
 		if (inventoryCount.containsKey(e)){
-            inventoryCount.put(key(e),count+1);
+            inventoryCount.put(e.toString(),increase);
         }else{
-
+            inventoryCount.put(e.toString(),1);
         }
 	}
 
@@ -70,7 +70,12 @@ public class EquipmentInventory {
 	 * @param e The type of equipment for which we want to decrease the inventoryCount
 	 */
 	protected void decreaseInventoryCount(Equipment e) {
-		
+		int decrease = inventoryCount.get(e)+1;
+        if (inventoryCount.containsKey(e)){
+            inventoryCount.put(e.toString(),decrease);
+        }else{
+            inventoryCount.put(e.toString(), 1);
+        }
 	}
 
 	/** 
@@ -80,7 +85,11 @@ public class EquipmentInventory {
 	 * @return
 	 */
 	public Integer getInventoryCount(Equipment e) {
-		
+		if (inventory.contains(e)){
+            return inventoryCount.get(e);
+        }else{
+            return -1;
+        }
 	}
 	
 	/**
@@ -92,10 +101,12 @@ public class EquipmentInventory {
 	 * @return the string representation of the EquipmentInventory
 	 */
 	public String toString() {
-		
+		return "[EquipmentInventory: ";
 	}
 
 	public static void main(String[] args) {
-		
+		EquipmentInventory inventory = new EquipmentInventory();
+        EquipmentInventory EquipmentInventory = new EquipmentInventory();
+        inventory.add(Chair hell);
 	}
 }
