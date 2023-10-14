@@ -1,8 +1,7 @@
 package OOP.lab3;
 
-public class Guitar {
-    
+public class Guitar extends Instrument{
     public String toString(){
-    return "Guitars";
+    return "Guitar";
 }
 }

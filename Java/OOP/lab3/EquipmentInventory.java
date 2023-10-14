@@ -41,7 +41,7 @@ public class EquipmentInventory {
 	 * @param e The equipment object to remove
 	 */
 	public void remove(Equipment e) {
-        inventory.remove(e);
+		inventory.remove(e);
         decreaseInventoryCount(e);
 	}
 
@@ -53,9 +53,8 @@ public class EquipmentInventory {
 	 * @param e The type of equipment for which we want to increase the inventoryCount
 	 */
 	protected void increaseInventoryCount(Equipment e) {
-        int increase = inventoryCount.get(e) + 1;
-		if (inventoryCount.containsKey(e)){
-            inventoryCount.put(e.toString(),increase);
+		if (inventoryCount.containsKey(e.toString())){
+            inventoryCount.put(e.toString(),getInventoryCount(e)+1);
         }else{
             inventoryCount.put(e.toString(),1);
         }
@@ -70,12 +69,14 @@ public class EquipmentInventory {
 	 * @param e The type of equipment for which we want to decrease the inventoryCount
 	 */
 	protected void decreaseInventoryCount(Equipment e) {
-		int decrease = inventoryCount.get(e)+1;
-        if (inventoryCount.containsKey(e)){
-            inventoryCount.put(e.toString(),decrease);
-        }else{
-            inventoryCount.put(e.toString(), 1);
-        }
+        if (inventoryCount.containsKey(e.toString())){
+			int decrease = getInventoryCount(e)- 1;
+			if (decrease == 0) {
+			inventoryCount.remove(e.toString());
+			} else {
+				inventoryCount.put(e.toString(),decrease);
+			}
+		}
 	}
 
 	/** 
@@ -85,13 +86,12 @@ public class EquipmentInventory {
 	 * @return
 	 */
 	public Integer getInventoryCount(Equipment e) {
-		if (inventory.contains(e)){
-            return inventoryCount.get(e);
-        }else{
-            return -1;
-        }
+		if (inventoryCount.get(e.toString()) != null){
+			return inventoryCount.get(e.toString());
+		}
+        return -1;
+
 	}
-	
 	/**
 	 * Return the String representation of the EquipmentInventory.
 	 * It should look similarly to the following:
@@ -101,12 +101,31 @@ public class EquipmentInventory {
 	 * @return the string representation of the EquipmentInventory
 	 */
 	public String toString() {
-		return "[EquipmentInventory: ";
+		String out = "[EquipmentInventory:";
+		for (Map.Entry<String, Integer> e : inventoryCount.entrySet()){
+			out = out.concat(String.format(" %s: %d,",e.getKey(),e.getValue()));
+		}
+		out = (out.length() == 20) ? out : (out.substring(0,out.length()-1)).concat("]");
+		return out;
 	}
 
 	public static void main(String[] args) {
-		EquipmentInventory inventory = new EquipmentInventory();
-        EquipmentInventory EquipmentInventory = new EquipmentInventory();
-        inventory.add(Chair hell);
+		
+		//ArrayList inventory = new ArrayList<Equipment>();
+        EquipmentInventory equipmentinventory = new EquipmentInventory();
+			Guitar guitar = new Guitar(); Guitar guitar1 = new Guitar(); Guitar guitar2 = new Guitar();
+			Stool stool = new Stool(); Stool stool1 = new Stool(); Stool stool2 = new Stool();
+			equipmentinventory.add(guitar); equipmentinventory.add(guitar1); equipmentinventory.add(guitar2);
+			equipmentinventory.add(stool); equipmentinventory.add(stool1); equipmentinventory.add(stool2);
+		Chair chair = new Chair();
+		equipmentinventory.add(chair);
+		Keyboard k1 = new Keyboard();
+		Keyboard k2 = new Keyboard();
+		equipmentinventory.add(k1);
+		equipmentinventory.add(k2);
+		System.out.println(equipmentinventory.toString());
+		equipmentinventory.remove(k1);
+		equipmentinventory.remove(stool);
+		System.out.println(equipmentinventory.toString());
 	}
 }

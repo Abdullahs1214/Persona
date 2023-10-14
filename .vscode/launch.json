@@ -3,6 +3,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Guitar",
+            "request": "launch",
+            "mainClass": "OOP.lab3.Guitar",
+            "projectName": "Personal-Library_6b324c10"
+        },
+        {
+            "type": "java",
+            "name": "EquipmentInventory",
+            "request": "launch",
+            "mainClass": "OOP.lab3.EquipmentInventory",
+            "projectName": "Personal-Library_6b324c10"
+        },
+        {
+            "type": "java",
+            "name": "Equipment",
+            "request": "launch",
+            "mainClass": "OOP.lab3.Equipment",
+            "projectName": "Personal-Library_6b324c10"
+        },
+        {
+            "type": "java",
             "name": "Instrument",
             "request": "launch",
             "mainClass": "OOP.lab3.Instrument",
