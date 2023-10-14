@@ -113,19 +113,22 @@ public class EquipmentInventory {
 		
 		//ArrayList inventory = new ArrayList<Equipment>();
         EquipmentInventory equipmentinventory = new EquipmentInventory();
-			Guitar guitar = new Guitar(); Guitar guitar1 = new Guitar(); Guitar guitar2 = new Guitar();
-			Stool stool = new Stool(); Stool stool1 = new Stool(); Stool stool2 = new Stool();
-			equipmentinventory.add(guitar); equipmentinventory.add(guitar1); equipmentinventory.add(guitar2);
-			equipmentinventory.add(stool); equipmentinventory.add(stool1); equipmentinventory.add(stool2);
+		Guitar guitar = new Guitar(); Guitar guitar1 = new Guitar(); Guitar guitar2 = new Guitar();
+		Stool stool = new Stool(); Stool stool1 = new Stool(); Stool stool2 = new Stool();
+		equipmentinventory.add(guitar); equipmentinventory.add(guitar1); equipmentinventory.add(guitar2);
+		equipmentinventory.add(stool); equipmentinventory.add(stool1); equipmentinventory.add(stool2);
 		Chair chair = new Chair();
 		equipmentinventory.add(chair);
 		Keyboard k1 = new Keyboard();
 		Keyboard k2 = new Keyboard();
 		equipmentinventory.add(k1);
 		equipmentinventory.add(k2);
+		System.out.println("Step3");
 		System.out.println(equipmentinventory.toString());
+		
 		equipmentinventory.remove(k1);
 		equipmentinventory.remove(stool);
+		System.out.println("Step4");
 		System.out.println(equipmentinventory.toString());
 	}
 }

@@ -5,9 +5,4 @@ public class Equipment {
         
         return "Equipment";
         }
-
-    public static void main(String[] args){
-        Stool stool = new Stool();
-        System.out.println(stool.toString());
-    }
 }
