@@ -60,10 +60,7 @@ public class BandNameGenerators {
         if (adjectivesLoaded == false || nounsLoaded == false){
             return "UNINTITIALIZED";
         }
-        else{
-            
-        }
-
+		return "f";
 	}
 
 	

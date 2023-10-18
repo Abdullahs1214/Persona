@@ -3,7 +3,7 @@ package OOP.lab3;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import OOP.lab3.Equipment;
+
 /** 
  * Finish this class.
  */

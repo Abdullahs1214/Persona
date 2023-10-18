@@ -1,6 +1,6 @@
 package GuessingGamepersonal;
 
-import Guessgame.GameLauncher;
+
 
 public class GuessingGame {
     boolean p1isRight;
